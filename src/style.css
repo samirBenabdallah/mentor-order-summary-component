@@ -1,0 +1,94 @@
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%); 
+    --font-weight-500: 500 ;   
+    --font-weight-700: 700 ;   
+    --font-weight-900: 900 ;   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: var(--font-weight-500);
+    color: var(--Dark-blue);
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+}
+button{
+    font-weight: var(--font-weight-700);
+    cursor: pointer;}
+.center-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+}
+.card{
+    width: 300px;
+    height: 500px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: start;
+}
+.card > * {margin-bottom: 20px;}
+.card-img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px ;
+}
+.card-title{font-weight: var(--font-weight-900);}
+.card-paragraphe{
+    color: var(--Desaturated-blue);
+    text-align: center;
+}
+.music{
+    width: 90%;
+    display: flex;
+    background-color: var(--Pale-blue);
+    padding: 15px;
+    border-radius: inherit;
+    align-items: center;
+}
+.music-icon{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.music  *{
+    font-size: 13px;
+}
+.music-info{margin-right: 70px;}
+.music-info-title{font-weight: var(--font-weight-900);}
+.music-info-price{margin-top: 5px;}
+.change-button{
+    font-weight: var(--font-weight-700);
+    color: var(--Bright-blue);
+}
+.card-payment-button{
+    width: 90%;
+    height: 40px;
+    color: var(--Pale-blue);
+    background-color: var(--Bright-blue);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px -2px var(--Desaturated-blue);
+}
+.card-cencal-button{color: var(--Bright-blue);}
+.card-payment-button:hover{opacity: .8;}
+@media screen and (max-width:767px) {
+    .container{
+        background-image: url("../images/pattern-background-mobile.svg");
+    }
+    .card-paragraphe{
+        padding-inline: 25px;
+    }
+}
